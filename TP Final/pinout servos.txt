@@ -1,0 +1,4 @@
+Futaba s3003
+negro->-
+rojo->+
+blanco->señal

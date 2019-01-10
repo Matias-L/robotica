@@ -1,0 +1,11 @@
+Lineales:
+https://www.macrondynamics.com/linear-robotics
+
+Cilindrico:
+http://strobotics.com/cylindrical-format-robot.htm
+
+Esferico:
+https://new.abb.com/products/robotics/es/robots-industriales/irb-1520id
+
+Humanoide:
+https://www.rethinkrobotics.com/baxter/

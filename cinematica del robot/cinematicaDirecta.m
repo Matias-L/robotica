@@ -1,3 +1,6 @@
+clc
+clear all
+
 %primer robot
 %parametros
 
@@ -15,7 +18,37 @@ resolucion=100;
 Px=zeros(1, resolucion);
 Py=zeros(1, resolucion);
 
-%Primero grafico los limites de trabajo
+
+%Prompt
+prompt = '¿Q1? ';
+q1 = input(prompt)
+prompt = '¿Q2? ';
+q2 = input(prompt)
+px=l1*cos(q1)+l2*cos(q1+q2);
+py=l1*sin(q1)+l2*sin(q1+q2);
+orientacion=q1+q2;   %ESTO ESTA MAL. CONSULTAR EN CLASES!!!!!!!
+
+
+
+
+
+
+
+if (q1>q1max) || (q1<q1min) || (q2>q2max)||(q2<q2min)
+prompt = 'ERROR: Valores fuera del rango'
+
+else
+
+%Primero calculo las coordenadas de los brazos
+b1x=l1*cos(q1);
+b1y=l1*sin(q1);
+b2x=l2*cos(q1+q2)+b1x;
+b2y=l2*sin(q1+q2)+b1y;
+
+
+
+
+%Luego grafico los limites de trabajo
 %para alcanze maximo (azul)
 q2=0;
 q1=q1min;
@@ -78,6 +111,18 @@ for i=1:resolucion
     q2=q2-abs(q2min/resolucion);
 end
 plot(Px, Py, 'Color', 'green')
+
+
+plot (px, py, 'r*')
+%grafico las articulaciones
+plot ([0 b1x], [0 b1y])
+plot([b1x b2x], [b1y b2y])
+
+
+
+
+
 hold off;
 
+end
 

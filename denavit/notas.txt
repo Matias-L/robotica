@@ -1,0 +1,1 @@
+En diseño de robots se trata que los ejes sean paralelos o esten rotados a 90 grados. Simplifica la construccion, el control, software.
